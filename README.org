@@ -1,0 +1,39 @@
+#+BEGIN_HTML
+<img align="right" src="samaritan.png" alt="logo">
+#+END_HTML
+* Samaritan
+A discord bot to download all files in a channel and upload it to Google Drive.
+
+** Dependencies
+Create a virtual environment by:
+
+=python3 -m venv venv=
+
+Activate the virtual environment after creating:
+
+=. venv/bin/activate=
+
+Install dependencies:
+
+=pip install -r requirements.txt=
+
+Create a =save_files= folder in the source directory:
+
+=mkdir save_files=
+
+** Secrets
+Insert the DISCORD_TOKEN environment variable in =.env=
+
+Add the =client_secrets.json= for access to your Google Drive
+
+** Run
+Run the bot within the virtual environment:
+
+=python exec.py=
+
+Login to your desired Google Drive account
+
+** Commands
+=!download <message-id>= - Download the attachment of your message ID locally to =save_files/=
+
+=!update= - Download all (unread) attachments in channel and uploads them to Drive
